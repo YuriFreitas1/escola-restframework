@@ -1,0 +1,38 @@
+# Byte-compiled / optimized / compiled files
+*.pyc
+__pycache__/
+*.egg-info/
+.pytest_cache/
+
+# Environments
+.env/
+venv/
+env/
+
+# SQLite database
+*.sqlite3
+
+# Logs and backups
+*.log
+*.bak
+
+# Media and static files (if served locally for development)
+media/
+static/
+
+# Django migrations cache
+migrations/__pycache__/
+
+# IDE and editor files
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Testing and coverage reports
+.tox/
+.coverage
+htmlcov/
+
+# Other temporary files
+tmp/
