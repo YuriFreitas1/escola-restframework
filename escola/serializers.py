@@ -9,11 +9,11 @@ class EstudanteSerializer(serializers.ModelSerializer):
 
     def validate(self,dados):
         if cpf_invalido(dados['cpf']):
-            raise serializers.ValidationError({'cpf':'O CPF deve conter 11 digitos!'})
+            raise serializers.ValidationError({'cpf':'O CPF deve ser VALIDO!'})
         if nome_invalido(dados['nome']):
             raise serializers.ValidationError({'nome':'O campo nome aceita apenas letras'})
         if celular_invalido(dados['celular']):
-            raise serializers.ValidationError({'celular':'O campo celular deve conter 13 digitos'})
+            raise serializers.ValidationError({'celular':'O campo celular deve seguir o modelo 99 99999-9999(respeitando traços e espaços) !'})
         return dados
     
 
