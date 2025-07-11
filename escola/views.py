@@ -29,6 +29,12 @@ class MatriculaViewSet(viewsets.ModelViewSet):
     http_method_names = ['get','post']
 
 class ListaMatriculaEstudante(generics.ListAPIView):
+    """
+    Descrição da View:
+    - Lista Matriculas por id de Estudante
+    Parâmetros:
+    - pk (int): O identificador primário do objeto. Deve ser um número inteiro.
+    """
     def get_queryset(self):
         queryset = Matricula.objects.filter(estudante_id=self.kwargs['pk']).order_by('id')
         return queryset
@@ -36,6 +42,12 @@ class ListaMatriculaEstudante(generics.ListAPIView):
 
 
 class ListaMatriculaCurso(generics.ListAPIView):
+    """
+    Descrição da View:
+    - Lista Matriculas por id de Curso
+    Parâmetros:
+    - pk (int): O identificador primário do objeto. Deve ser um número inteiro.
+    """
     def get_queryset(self):
         queryset = Matricula.objects.filter(curso_id=self.kwargs['pk']).order_by('id')
         return queryset
